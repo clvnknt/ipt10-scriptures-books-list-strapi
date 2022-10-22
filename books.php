@@ -46,12 +46,12 @@ $books = getBooks();
 
 </head>
 <body>
+    <div class="p-3 mb-2 bg-dark text-white">
     <div class="container">
-        <h1>Scriptures Books List from Strapi</h1>
-        <table class="table">
+    <h1 class="display-1">Scriptures Books List from Strapi</h1>
+        <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Author</th>
                         <th scope="col">Category</th>
@@ -62,14 +62,14 @@ $books = getBooks();
                     <?php foreach($books->data as $bookData){ 
                     $book = $bookData->attributes;?>
                     <tr>
-                        <th scope="row"><?php echo $bookData->id?></th>
-                        <td><?php echo $book->name ?></td>
-                        <td><?php echo $book->author?></td>
-                        <td><?php echo $book->category?></td>
+                        <th scope="row"><?= $book->name ?></th>
+                        <td><?= $book->author?></td>
+                        <td><?= $book->category?></td>
                     </tr>
                     <?php }?>
                 </tbody>
         </table>
     </div>
+</div>
 </body>
 </html>
