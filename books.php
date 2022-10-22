@@ -52,7 +52,7 @@ $books = getBooks();
         <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Name</th>
+                        <th scope="col">Book</th>
                         <th scope="col">Author</th>
                         <th scope="col">Category</th>
 
